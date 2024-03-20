@@ -28,6 +28,26 @@
             </div>
         </header>
 
+        <main>
+            <div class="container text-white">
+                <div class="row">
+
+                    <div class="col-4 card" v-for="currentDisco in dischiList">
+                        <img :src="currentDisco.poster" alt="poster">
+                        <h2>
+                            {{currentDisco.title}}
+                        </h2>
+                        <h3>
+                            {{currentDisco.author}}
+                        </h3>
+                        <h2>
+                            {{currentDisco.year}}
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </main>
+
 
     </div>
 
