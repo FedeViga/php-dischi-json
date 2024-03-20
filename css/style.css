@@ -10,3 +10,18 @@ header {
 header img {
     width: 64px;
 }
+
+.my_card {
+    background-color: #112030;
+    padding: 30px 60px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: normal;
+}

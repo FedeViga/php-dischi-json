@@ -20,29 +20,49 @@
 
 <body>
     
+    <!-- app -->
     <div id="app">
 
+        <!-- header -->
         <header>
             <div class="container">
                 <img src="https://i0.wp.com/brandingforum.org/wp-content/uploads/2023/10/Spotify-logo-500x281-1.png?resize=500%2C281&ssl=1" alt="logo">
             </div>
         </header>
 
+        <!-- main -->
         <main>
-            <div class="container text-white">
-                <div class="row">
 
-                    <div class="col-4 card" v-for="currentDisco in dischiList">
-                        <img :src="currentDisco.poster" alt="poster">
-                        <h2>
-                            {{currentDisco.title}}
-                        </h2>
-                        <h3>
-                            {{currentDisco.author}}
-                        </h3>
-                        <h2>
-                            {{currentDisco.year}}
-                        </h2>
+            <!-- container -->
+            <div class="container text-white py-5">
+
+                <!-- row -->
+                <div class="row row-cols-3 row-gap-5">
+                    <!-- col -->
+                    <div 
+                        class="col-4 px-4" 
+                        v-for="(currentDisco, index) in dischiList"
+                    >
+                        <!-- card -->
+                        <div class="my_card h-100 text-center">
+
+                            <img 
+                                class="img-fluid pb-4" 
+                                :src="currentDisco.poster" 
+                                :alt="'poster' + (index + 1)"
+                            >
+                            
+                            <h2>
+                                {{currentDisco.title}}
+                            </h2>
+                            <h3>
+                                {{currentDisco.author}}
+                            </h3>
+                            <h2>
+                                {{currentDisco.year}}
+                            </h2>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
